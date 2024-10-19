@@ -2,7 +2,9 @@
 body {
     text-align: center; /* Центрируем текст и изображения */
     color: #000000;
-    background: linear-gradient(to right, #87CEEB, #FFB6C1); /* Градиент от светло-голубого к светло-розовому */
+    background: linear-gradient(270deg, #ffcccb, #ff88cc, #663399, #0000cc); /* Градиент фона */
+    background-size: 400% 400%; /* Размер фона для анимации */
+    animation: gradientAnimation 15s ease infinite; /* Анимация градиента */
     font-family: 'Arial', sans-serif; /* Шрифт для текста */
     margin: 0; /* Убираем отступы по умолчанию */
     padding: 10px; /* Добавляем отступ внутри body */
@@ -10,6 +12,7 @@ body {
 
 /* Стили для заголовков */
 h1 {
+    background: linear-gradient(270deg, #0000cc, #663399, #ff88cc, #ffcccb);
     font-size: 2.5em; /* Размер шрифта для заголовка h1 */
     margin-bottom: 20px; /* Отступ снизу */
 }
@@ -19,9 +22,20 @@ h2 {
     margin-bottom: 10px; /* Отступ снизу */
 }
 
+/* Стили для верхней и нижней полоски */
+.top-bar, .bottom-bar {
+    background: linear-gradient(270deg, #ffcccb, #ff88cc, #663399, #0000cc); /* Темный цвет полоски */
+    height: 50px; /* Высота полоски */
+    width: 120%; /* Занимаем всю ширину */
+}
+
+.bottom-bar {
+    margin-top: 50px; /* Отступ сверху для нижней полоски */
+}
+
 /* Контейнер для игр */
 .game-container {
-    display: flex; /* Используем flexbox для выравнивания изображений */
+    display:flow; /* Используем flexbox для выравнивания изображений */
     flex-wrap: wrap; /* Разрешаем перенос изображений на новую строку */
     justify-content: center; /* Центрируем изображения по горизонтали */
 }
@@ -30,9 +44,9 @@ h2 {
 img {
     display: inline-block; /* Изображения будут отображаться в строке */
     margin: 20px; /* Добавляем отступы вокруг изображений */
-    border: 12px solid black;
-    border-radius: 30px;
-    transition: transform 0.3s; /* Плавный переход при изменении трансформации */
+    border: 12px solid black; /* Рамка для изображений */
+    border-radius: 30px; /* Скругление углов */
+    transition: transform 0.7s; /* Плавный переход при изменении трансформации */
     max-width: 100%; /* Изображения не должны превышать ширину экрана */
     height: auto; /* Сохраняем пропорции изображений */
 }
@@ -48,7 +62,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: #ff88cc; /* Подчеркивание при наведении */
 }
 
 /* Стили для кнопок */
@@ -56,8 +70,8 @@ a:hover {
     display: inline-block; /* Отображаем кнопку в строке */
     padding: 15px 30px; /* Отступы внутри кнопки */
     margin-top: 20px; /* Отступ сверху */
-    background-color: #DC143C; /* Цвет фона кнопки */
-    color: black; /* Цвет текста */
+    background: linear-gradient(270deg,#ff88cc, #663399, #0000cc, #ffcccb); /* Цвет фона кнопки */
+    background: linear-gradient(270deg, #0000cc, #663399, #ff88cc, #ffcccb); /* Цвет текста */
     border: 2px solid black; /* Рамка кнопки */
     border-radius: 30px; /* Скругление углов */
     font-size: 20px; /* Размер шрифта */
@@ -67,7 +81,7 @@ a:hover {
 }
 
 .button:hover {
-    background-color: #2bcd7d; /* Цвет фона при наведении */
+    background: linear-gradient(270deg, #ffcccb, #ff88cc, #663399, #0000cc); /* Цвет фона при наведении */
 }
 
 /* Убираем стандартный отступ у ul и li */
@@ -85,12 +99,6 @@ li {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
-
-body {
-    background: linear-gradient(270deg, #ffcccb, #ff88cc, #663399, #0000cc);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite; /* Анимация градиента */
 }
 
 /* Стили для мобильных устройств */
