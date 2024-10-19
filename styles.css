@@ -59,7 +59,7 @@ a:hover {
     background-color: #DC143C; /* Цвет фона кнопки */
     color: black; /* Цвет текста */
     border: 2px solid black; /* Рамка кнопки */
-    border-radius: 5px; /* Скругление углов */
+    border-radius: 30px; /* Скругление углов */
     font-size: 20px; /* Размер шрифта */
     font-weight: bold; /* Жирный текст */
     text-align: center; /* Центрируем текст */
