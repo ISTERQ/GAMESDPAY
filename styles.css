@@ -22,6 +22,8 @@ h2 {
     margin-bottom: 10px; /* Отступ снизу */
 }
 
+}
+
 /* Стили для верхней и нижней полоски */
 .top-bar, .bottom-bar {
     background: linear-gradient(270deg, #ffcccb, #ff88cc, #663399, #0000cc); /* Темный цвет полоски */
